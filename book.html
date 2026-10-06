@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ananya Sharma | The Calm Mind</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e5ede5',
+                            500: '#739574',
+                            600: '#5a785b',
+                            700: '#455d46',
+                        },
+                        teal: {
+                            600: '#2b6cb0',
+                            700: '#2c5282',
+                            800: '#1a365d',
+                        },
+                        sand: {
+                            50: '#fdfbf7',
+                            100: '#f7f2e8',
+                            200: '#ede4d2',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-sand-50 text-gray-800 antialiased selection:bg-sage-500 selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-sand-50/90 backdrop-blur-md border-b border-sand-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-sage-500 flex items-center justify-center text-white font-serif font-bold text-lg shadow-sm">
+                    AS
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg sm:text-xl text-sage-700 tracking-tight">Dr. Ananya Sharma</span>
+                    <span class="block text-xs text-gray-500 tracking-wider uppercase">Clinical Psychologist & Author</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-gray-600">
+                <a href="#about" class="hover:text-sage-600 transition-colors">About the Author</a>
+                <a href="#book" class="hover:text-sage-600 transition-colors">The Book</a>
+                <a href="#testimonials" class="hover:text-sage-600 transition-colors">Reviews</a>
+                <a href="#sample" class="hover:text-sage-600 transition-colors">Free Chapter</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="openCartModal('Paperback', 24.99)" class="bg-sage-600 hover:bg-sage-700 text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-md hover:shadow-lg transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Buy Book</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-sand-100 to-sand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-sage-100 text-sage-700 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-award text-sage-500"></i>
+                        <span>Bestselling Mental Health Guide</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
+                        Find Your Anchor in a <span class="text-sage-600 italic">Chaotic World</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Master evidence-based mindfulness, soothe emotional burnout, and quiet your racing thoughts with practical psychological tools from Dr. Ananya Sharma.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#book" class="w-full sm:w-auto bg-sage-600 hover:bg-sage-700 text-white text-center font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-3 text-base">
+                            <i class="fa-solid fa-shopping-bag"></i>
+                            <span>Order Your Copy</span>
+                        </a>
+                        <a href="#sample" class="w-full sm:w-auto bg-white hover:bg-sand-100 text-sage-700 border border-sage-200 text-center font-medium px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-3 text-base">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Read Free Chapter</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center lg:justify-start space-x-6 pt-6 text-sm text-gray-500">
+                        <div class="flex items-center space-x-1 text-amber-500">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-gray-700 font-semibold ml-1">4.9 / 5</span>
+                        </div>
+                        <span>•</span>
+                        <span>Over 15,000+ Readers Guided</span>
+                    </div>
+                </div>
+
+                <!-- Right Book Mockup Column -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 sm:w-80 h-[450px] sm:h-[500px] bg-gradient-to-br from-sage-700 to-sage-600 rounded-2xl shadow-2xl p-8 flex flex-col justify-between text-white transform hover:-translate-y-2 transition-transform duration-500 border border-sage-500">
+                        <div class="absolute inset-0 bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:16px_16px] rounded-2xl pointer-events-none"></div>
+                        <div class="relative z-10">
+                            <span class="text-xs uppercase tracking-widest text-sage-100 font-semibold">International Bestseller</span>
+                            <h3 class="text-3xl font-serif font-bold mt-3 leading-snug">The Calm Mind</h3>
+                            <p class="text-sm text-sage-200 mt-1">A Guide to Inner Peace</p>
+                        </div>
+                        <div class="relative z-10 text-center my-auto">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 shadow-inner">
+                                <i class="fa-solid fa-seedling text-3xl text-sage-100"></i>
+                            </div>
+                        </div>
+                        <div class="relative z-10 flex justify-between items-end">
+                            <div>
+                                <p class="text-xs text-sage-200 uppercase tracking-wider">Written By</p>
+                                <p class="font-serif font-semibold text-sm">Dr. Ananya Sharma</p>
+                            </div>
+                            <div class="bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-medium">
+                                3rd Edition
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Author Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-sage-100 rounded-3xl transform -rotate-2"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5] bg-sand-200">
+                            <img src="https://placehold.co/600x750/739574/ffffff?text=Dr.+Ananya+Sharma" alt="Dr. Ananya Sharma" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block bg-sage-100 text-sage-700 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">
+                        Meet Your Guide
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900 leading-snug">
+                        "Healing begins the moment we stop fighting our thoughts and start understanding them."
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+                        Dr. Ananya Sharma is a renowned clinical psychologist with over 15 years of clinical practice. Specializing in cognitive behavioral therapy and somatic mindfulness, she has helped thousands of individuals navigate anxiety, emotional burnout, and modern stress.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Through her writing, workshops, and clinical sessions, Dr. Sharma bridges the gap between complex psychological science and compassionate, actionable daily practices. <span class="font-semibold text-gray-800">The Calm Mind</span> is the culmination of her years of clinical research and patient success stories.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 pt-4 border-t border-gray-100">
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-sage-600">15+</span>
+                            <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Years Experience</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-sage-600">15k+</span>
+                            <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Books Sold</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-sage-600">40+</span>
+                            <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Workshops Led</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Formats & Shop Section -->
+    <section id="book" class="py-20 bg-sand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs uppercase font-semibold text-sage-700 tracking-wider bg-sage-100 px-3 py-1 rounded-full">Secure Your Copy</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Choose Your Edition</h2>
+                <p class="text-gray-600">Select the format that best fits your reading style and begin your journey toward sustainable inner peace.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Format 1: E-Book -->
+                <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between border border-sand-200 hover:shadow-xl transition-all relative">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-sage-50 text-sage-700 text-xs font-bold px-3 py-1 rounded-full">INSTANT ACCESS</span>
+                            <span class="text-2xl font-bold text-gray-900">$12.99</span>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Digital E-Book</h3>
+                        <p class="text-gray-500 text-sm mb-6">Perfect for reading on Kindle, iPad, phone, or computer.</p>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Instant PDF, ePub & Mobi download</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Bonus printable worksheets</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Lifetime free updates</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCartModal('Digital E-Book', 12.99)" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 rounded-xl shadow transition-colors">
+                        Buy E-Book Now
+                    </button>
+                </div>
+
+                <!-- Format 2: Paperback (Featured) -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col justify-between border-2 border-sage-500 relative transform md:-translate-y-2">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-sage-600 text-white text-xs uppercase font-bold tracking-wider px-3.5 py-1 rounded-full shadow">
+                        Most Popular
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-sage-100 text-sage-800 text-xs font-bold px-3 py-1 rounded-full">PHYSICAL COPY</span>
+                            <span class="text-3xl font-bold text-gray-900">$24.99</span>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">Paperback Edition</h3>
+                        <p class="text-gray-500 text-sm mb-6">High-quality softcover book delivered right to your doorstep.</p>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Printed on eco-friendly cream paper</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Free domestic shipping included</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Includes free companion E-Book</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCartModal('Paperback Edition', 24.99)" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3.5 rounded-xl shadow-lg transition-colors">
+                        Buy Paperback Now
+                    </button>
+                </div>
+
+                <!-- Format 3: Hardcover -->
+                <div class="bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between border border-sand-200 hover:shadow-xl transition-all relative">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1 rounded-full">COLLECTOR'S ITEM</span>
+                            <span class="text-2xl font-bold text-gray-900">$34.99</span>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-gray-900 mb-2">Deluxe Hardcover</h3>
+                        <p class="text-gray-500 text-sm mb-6">Clothbound premium hardcover with gold foil stamping & ribbon bookmark.</p>
+                        <ul class="space-y-3 text-sm text-gray-600 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Signed author bookplate included</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Priority worldwide shipping</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sage-600 mr-2.5"></i>Includes free companion E-Book</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCartModal('Deluxe Hardcover', 34.99)" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 rounded-xl shadow transition-colors">
+                        Buy Hardcover Now
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs uppercase font-semibold text-sage-700 tracking-wider bg-sage-100 px-3 py-1 rounded-full">Reader Reviews</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-gray-900">Transformative Words from Readers</h2>
+                <p class="text-gray-600">See how "The Calm Mind" has brought clarity and peace to people around the world.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-sand-50 p-8 rounded-2xl border border-sand-200 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div class="text-amber-500 space-x-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic text-sm leading-relaxed">
+                            "Dr. Sharma cuts through the noise of self-help books with evidence-based psychology that actually works. This book has completely changed how I handle work stress and anxiety."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-sand-200">
+                        <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-bold text-sage-800 text-sm">
+                            SK
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-gray-900">Sarah Jenkins</p>
+                            <p class="text-xs text-gray-500">Verified Reader</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-sand-50 p-8 rounded-2xl border border-sand-200 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div class="text-amber-500 space-x-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic text-sm leading-relaxed">
+                            "As a therapist myself, I recommend 'The Calm Mind' to my patients regularly. Dr. Sharma explains emotional regulation with such warmth, precision, and empathy."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-sand-200">
+                        <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-bold text-sage-800 text-sm">
+                            DR
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-gray-900">Dr. David Reynolds</p>
+                            <p class="text-xs text-gray-500">Clinical Psychologist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-sand-50 p-8 rounded-2xl border border-sand-200 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div class="text-amber-500 space-x-1 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic text-sm leading-relaxed">
+                            "The breathing exercises and cognitive reframing techniques in chapter four alone are worth ten times the price of the book. A masterpiece!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-sand-200">
+                        <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-bold text-sage-800 text-sm">
+                            EM
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-gray-900">Elena Martinez</p>
+                            <p class="text-xs text-gray-500">Verified Reader</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Chapter Download Section -->
+    <section id="sample" class="py-20 bg-sage-700 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+            <span class="bg-sage-600 text-sage-100 text-xs uppercase font-semibold px-4 py-1.5 rounded-full tracking-wider">Free Gift</span>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold">Read the First Chapter Free</h2>
+            <p class="text-sage-100 text-base sm:text-lg max-w-2xl mx-auto font-light">
+                Enter your email below and receive Chapter 1: "Understanding the Racing Brain" instantly in your inbox right now.
+            </p>
+
+            <form onsubmit="handleFreeDownload(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                <input type="email" id="subscriberEmail" required placeholder="Enter your email address" class="flex-1 px-4 py-3.5 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit" class="bg-white hover:bg-sand-100 text-sage-800 font-semibold px-8 py-3.5 rounded-xl transition-colors shadow">
+                    Get Free Chapter
+                </button>
+            </form>
+            <p id="downloadSuccessMessage" class="text-sage-200 text-sm hidden font-medium">
+                <i class="fa-solid fa-circle-check text-white mr-1"></i> Success! Check your inbox for the download link.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-full bg-sage-500 flex items-center justify-center text-white font-serif font-bold text-sm">
+                    AS
+                </div>
+                <span class="font-serif font-bold text-white text-lg">Dr. Ananya Sharma</span>
+            </div>
+            <p class="text-xs text-gray-500 text-center md:text-left">
+                &copy; 2026 Dr. Ananya Sharma. All rights reserved. Built for NexGen Craft Labs Client Demo.
+            </p>
+            <div class="flex space-x-6 text-lg">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Checkout Modal Simulator -->
+    <div id="cartModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full mx-4 p-6 sm:p-8 shadow-2xl relative transform transition-all">
+            <button onclick="closeCartModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div id="modalContent" class="space-y-6">
+                <div class="text-center space-y-2">
+                    <div class="w-12 h-12 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-gray-900">Complete Your Order</h3>
+                    <p class="text-xs text-gray-500">Secure checkout simulation powered by NexGen Craft Labs</p>
+                </div>
+
+                <div class="bg-sand-50 p-4 rounded-xl border border-sand-200 space-y-2">
+                    <div class="flex justify-between font-semibold text-gray-800">
+                        <span id="modalBookFormat">Paperback Edition</span>
+                        <span id="modalBookPrice">$24.99</span>
+                    </div>
+                    <p class="text-xs text-gray-500" id="modalBookDesc">Includes standard shipping & digital companion bundle.</p>
+                </div>
+
+                <form onsubmit="handleCheckoutSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Full Name</label>
+                        <input type="text" required placeholder="Aarav Sharma" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-sage-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Email Address</label>
+                        <input type="email" required placeholder="aarav@example.com" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-sage-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Shipping / Delivery Address</label>
+                        <input type="text" required placeholder="123 Wellness Ave, City" class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-sage-500 focus:outline-none">
+                    </div>
+                    <button type="submit" class="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 rounded-xl shadow transition-colors text-sm">
+                        Confirm & Pay Securely
+                    </button>
+                </form>
+            </div>
+
+            <div id="modalSuccess" class="hidden text-center space-y-4 py-6">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-gray-900">Thank You!</h3>
+                <p class="text-gray-600 text-sm">Your order has been placed successfully. A confirmation receipt and tracking number have been sent to your email.</p>
+                <button onclick="closeCartModal()" class="bg-sage-600 hover:bg-sage-700 text-white px-6 py-2.5 rounded-xl text-sm font-medium">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCartModal(format, price) {
+            document.getElementById('modalBookFormat').innerText = format;
+            document.getElementById('modalBookPrice').innerText = '$' + price.toFixed(2);
+            document.getElementById('modalContent').classList.remove('hidden');
+            document.getElementById('modalSuccess').classList.add('hidden');
+            document.getElementById('cartModal').classList.remove('hidden');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cartModal').classList.add('hidden');
+        }
+
+        function handleCheckoutSubmit(event) {
+            event.preventDefault();
+            document.getElementById('modalContent').classList.add('hidden');
+            document.getElementById('modalSuccess').classList.remove('hidden');
+        }
+
+        function handleFreeDownload(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('subscriberEmail');
+            if(emailInput.value) {
+                emailInput.value = '';
+                document.getElementById('downloadSuccessMessage').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('downloadSuccessMessage').classList.add('hidden');
+                }, 5000);
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('cartModal');
+            if (event.target == modal) {
+                closeCartModal();
+            }
+        }
+    </script>
+</body>
+</html>
